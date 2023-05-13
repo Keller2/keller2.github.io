@@ -11,51 +11,72 @@
     height: 100vh;
   }
   
-  .navigation {
-    height: 96px;
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    border-style: dotted;
-    border-color: aqua;
-  }
+  @media screen and (min-width: 600px) {
+    .navigation {
+      height: 96px;
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      justify-content: flex-start;
+    }
   
-  .img-logo {
-    width: 64px;
-    height: 64px;
-    background-color: transparent;
-    cursor: pointer;
-  }
+    .navigation__items {
+      display: flex;
+      list-style-type: none;
+      flex-grow: 1;
+      justify-content: space-around;
+      border-style: dotted;
+      border-color: aqua;
+    }
   
-  .main_nav {
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    width: 100%;
+    .navigation__item {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+  
+    .navigation__link {
+      text-decoration: none;
+      color: white;
+      white-space: nowrap;
+    }
+  
+    .img-logo {
+      width: 64px;
+      height: 64px;
+      background-color: transparent;
+      margin-left: 16px;
+      margin-right: 16px;
+      cursor: pointer;
+      border: 2px solid white;
+    }
   }
-  .main_nav.items{
-    display: flex;
-    align-items: center;
-    justify-content: left;
 
-  }
-  
-  .navigation__item {
-    list-style-type: none;
-    width: 90px;
-    justify-content: space-between;
-  }
-  
-  li.navigation__item a {
-    text-decoration: none;
-    color: white;
-    white-space: nowrap;
-
-
+  @media screen and (max-width: 599px) {
+    .navigation__items {
+      display: none;
+    }
+    .navigation {
+        height: 96px;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        justify-content: flex-start;
+      }
+    .img-logo {
+        width: 64px;
+        height: 64px;
+        background-color: transparent;
+        margin-left: 16px;
+        margin-right: 16px;
+        cursor: pointer;
+        border: 2px solid white;
+      }
   }
   
