@@ -9,12 +9,24 @@
     width: 50%;
     background-color: black;
     height: 100vh;
+    float: left;
+  }
+.right{
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+  float: right; /*change back to right*/
+}
+  .rightNav{
+    z-index: 1;
+    position: relative;
   }
 
   .navigation {
     position: relative;
     z-index: 2;
   }
+  
   .background_img{
   position: absolute;
   top: 0;
@@ -23,15 +35,73 @@
   left: 0;
   background-image: url(../images/2.jpg);
   opacity: 0.09;
-  transform: scaleX(-1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-
   }
+
+.right_img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/3.jpg);
+  background-size: cover;
+  opacity: 0.9;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  /*border-bottom: 1px solid black;
+  filter: brightness(1.6);
+    */
+}
+
+.navigation__link {
+text-decoration: none;
+color: white;
+white-space: nowrap;
+}
+
+.navigation__items {
+  font-family: 'Lato', sans-serif;
+  font-weight:500;
+  list-style-type: none;
+}
+
+.rightnav__items{
+  font-family: 'Lato', sans-serif;
+  font-weight:500;
+  list-style-type: none;  
+}
+.right__link {
+  text-decoration: none;
+  color: black;
+  white-space: nowrap; 
+}
+.contentR{
+  height: calc(100vh - 44px);
+  background-image: url(../images/macright.png);
+  background-size: cover;
+  background-position: left;
+}
+.contentL{
+  height: calc(100vh - 44px);
+  background-image: url(../images/macleft.png);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+
+}
+
   
   @media screen and (min-width: 834px) {
+    .left{
+      /*  display:none; remove after finished*/
+    }
+
     .navigation {
       
       height: 44px;
@@ -41,29 +111,35 @@
       z-index: 999;
       display: flex;
     }
+
+    .rightNav {
+      height: 44px;
+      font-size: 0.9rem;
+      padding: 4px;
+      justify-content: center;
+      z-index: 999;
+      display: flex;
+    }
+
+    .rightnav__items{
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      align-items: center;
+    }
   
     .navigation__items {
       display: flex;
-      font-family: 'Lato', sans-serif;
-      font-weight:500;
-      list-style-type: none;
       flex-grow: 1;
       z-index: 89;
       justify-content: space-around;
-
       align-items: center;
     }
   
     .navigation__item {
       /*stuff */
     }
-  
-    .navigation__link {
-      text-decoration: none;
-      color: white;
-      white-space: nowrap;
-    }
-  
+
     .img-logo {
       width: 36px;
       height: 36px;
