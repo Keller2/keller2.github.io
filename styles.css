@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+   /* font-family: 'Times New Roman', Times, serif;*/
   }
   
   .left {
@@ -11,31 +11,33 @@
     height: 100vh;
   }
   
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 834px) {
     .navigation {
-      height: 96px;
-      display: flex;
-      align-items: center;
-      font-size: 1.2rem;
+      height: 44px;
+      font-size: 0.9rem;
       position: sticky;
-      top: 0;
+      border: 4px dotted green; 
       z-index: 999;
       justify-content: flex-start;
+     
     }
   
     .navigation__items {
       display: flex;
+      font-family: 'Lato', sans-serif;
+      font-weight:500;
       list-style-type: none;
       flex-grow: 1;
+      margin-top: -40px;
       justify-content: space-around;
-      border-style: dotted;
-      border-color: aqua;
+      padding: 0px 0px;
+      border: 4px dotted plum; 
     }
   
     .navigation__item {
       display: flex;
       align-items: center;
-      padding: 0 16px;
+      border: 4px dotted aqua; 
     }
   
     .navigation__link {
@@ -45,38 +47,46 @@
     }
   
     .img-logo {
-      width: 64px;
-      height: 64px;
+      width: 36px;
+      height: 36px;
       background-color: transparent;
-      margin-left: 16px;
-      margin-right: 16px;
       cursor: pointer;
-      border: 2px solid white;
     }
   }
 
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: 834px) /*and (min-width: 170px)*/ {
+    .navigation__items {
+      display: none;
+    }
+    .img-logo {
+        /*
+        width: 64px;
+        height: 64px;
+        */
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        margin-left: 5%;
+        margin-top: 5%;
+        max-width: 15%;
+        max-height: 15%;
+        align-items: center;
+        cursor: pointer;
+      }
+  }
+  /*
+  @media screen and (max-width: 170px){
     .navigation__items {
       display: none;
     }
     .navigation {
-        height: 96px;
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        justify-content: flex-start;
+      display: none;
       }
     .img-logo {
-        width: 64px;
-        height: 64px;
-        background-color: transparent;
-        margin-left: 16px;
-        margin-right: 16px;
-        cursor: pointer;
-        border: 2px solid white;
+      display: none;
+      }
+      .left{
+        display: none;
       }
   }
-  
+  */
