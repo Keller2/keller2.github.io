@@ -10,12 +10,33 @@
     background-color: black;
     height: 100vh;
   }
+
+  .navigation {
+    position: relative;
+    z-index: 2;
+  }
+  .background_img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/2.jpg);
+  opacity: 0.09;
+  transform: scaleX(-1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  }
   
   @media screen and (min-width: 834px) {
     .navigation {
+      
       height: 44px;
       font-size: 0.9rem;
-      border: 4px dotted green; 
+      padding: 4px;
       justify-content: flex-start;
       z-index: 999;
       display: flex;
@@ -27,13 +48,14 @@
       font-weight:500;
       list-style-type: none;
       flex-grow: 1;
+      z-index: 89;
       justify-content: space-around;
-      border: 4px dotted plum; 
+
       align-items: center;
     }
   
     .navigation__item {
-      border: 4px dotted aqua; 
+      /*stuff */
     }
   
     .navigation__link {
@@ -47,6 +69,8 @@
       height: 36px;
       background-color: transparent;
       cursor: pointer;
+      z-index: 999;
+      opacity: 100%;
     }
   }
 
