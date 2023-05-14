@@ -15,11 +15,10 @@
     .navigation {
       height: 44px;
       font-size: 0.9rem;
-      position: sticky;
       border: 4px dotted green; 
-      z-index: 999;
       justify-content: flex-start;
-     
+      z-index: 999;
+      display: flex;
     }
   
     .navigation__items {
@@ -28,15 +27,12 @@
       font-weight:500;
       list-style-type: none;
       flex-grow: 1;
-      margin-top: -40px;
       justify-content: space-around;
-      padding: 0px 0px;
       border: 4px dotted plum; 
+      align-items: center;
     }
   
     .navigation__item {
-      display: flex;
-      align-items: center;
       border: 4px dotted aqua; 
     }
   
