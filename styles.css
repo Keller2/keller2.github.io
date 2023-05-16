@@ -112,6 +112,10 @@ white-space: nowrap;
     .contentR{
       height: calc(100vh - 44px);
     }
+
+    .construction{
+      display: none;
+    }
    
     .navigation {
       
