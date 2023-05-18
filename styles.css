@@ -4,6 +4,10 @@
     padding: 0;
    /* font-family: 'Times New Roman', Times, serif;*/
   }
+
+  a:link {
+    text-decoration: none;
+ }
   
   .left {
     width: 50%;
@@ -197,7 +201,7 @@ white-space: nowrap;
     .Linkedin{
       text-decoration: none;
       cursor: pointer;
-      list-style-type: none;  
+      list-style-type: none; 
     }
 
 
