@@ -199,6 +199,7 @@ white-space: nowrap;
     }
 
     .Linkedin{
+     /* Probably redundant*/
       text-decoration: none;
       cursor: pointer;
       list-style-type: none; 
